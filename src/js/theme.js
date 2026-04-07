@@ -22,7 +22,7 @@ export class ThemeManager {
 
   setTheme(theme) {
     const isDark = theme === 'dark';
-    const body = document.documentElement;
+    const body = document.body;
 
     if (isDark) {
       body.classList.remove(this.lightClass);
@@ -39,6 +39,9 @@ export class ThemeManager {
   toggle() {
     const current = localStorage.getItem(this.storageKey) || 'dark';
     this.setTheme(current === 'dark' ? 'light' : 'dark');
+    
+    // Disparar evento para atualizar UI
+    document.dispatchEvent(new CustomEvent('themeChanged'));
   }
 
   getCurrent() {
