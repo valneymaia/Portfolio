@@ -4,8 +4,9 @@
  */
 
 export class ContactForm {
-  constructor(formId = 'contact-form') {
-    this.form = document.getElementById(formId);
+  constructor(formId = 'contactForm') {
+    this.form = document.getElementById(formId) || document.querySelector('form[action*="formsubmit.co/ajax"]');
+    this.feedbackEl = document.getElementById('contact-feedback');
     this.init();
   }
 
@@ -36,6 +37,7 @@ export class ContactForm {
 
       if (response.ok) {
         submitBtn.textContent = '✓ Enviado com sucesso!';
+        this.setFeedback('Mensagem enviada com sucesso. Vou te responder em breve.', 'success');
         this.form.reset();
         
         setTimeout(() => {
@@ -47,6 +49,7 @@ export class ContactForm {
       }
     } catch (error) {
       submitBtn.textContent = '✗ Erro ao enviar';
+      this.setFeedback('Não foi possível enviar agora. Tente novamente em instantes.', 'error');
       console.error('Erro:', error);
       
       setTimeout(() => {
@@ -54,6 +57,14 @@ export class ContactForm {
         submitBtn.disabled = false;
       }, 3000);
     }
+  }
+
+  setFeedback(message, type) {
+    if (!this.feedbackEl) return;
+
+    this.feedbackEl.textContent = message;
+    this.feedbackEl.classList.remove('hidden', 'text-green-300', 'text-red-300');
+    this.feedbackEl.classList.add(type === 'success' ? 'text-green-300' : 'text-red-300');
   }
 }
 

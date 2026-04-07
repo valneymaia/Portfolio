@@ -35,7 +35,12 @@
       }
 
       body.theme-light #mobile-menu-btn {
-        background: rgba(255, 255, 255, 0.75) !important;
+        background: rgba(15, 23, 42, 0.86) !important;
+        border-color: rgba(255, 255, 255, 0.55) !important;
+      }
+
+      body.theme-light #mobile-menu-btn span {
+        background: #ffffff !important;
       }
 
       body.theme-light section[id]:not(#inicio),
@@ -87,6 +92,26 @@
         background: #1e293b !important;
       }
 
+      .hover-tilt {
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .hover-tilt.is-active {
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hover-tilt {
+          transition: none;
+        }
+      }
+
+      #mobile-nav:not(.hidden) {
+        display: flex;
+      }
+
       /* Menu mobile escondido por padrão em telas grandes */
       @media (min-width: 768px) {
         #mobile-menu-btn {
@@ -118,7 +143,7 @@
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="fixed top-4 right-4 z-20 hidden flex-col gap-1 rounded-lg bg-black/45 p-3 text-white transition md:hidden"
+      class="fixed top-4 right-4 z-20 flex flex-col gap-1 rounded-lg border border-white/40 bg-black/45 p-3 text-white transition hover:border-white md:hidden"
       aria-label="Menu"
       aria-expanded="false"
     >
@@ -144,7 +169,7 @@
     <!-- Mobile Navigation -->
     <nav
       id="mobile-nav"
-      class="fixed top-0 right-0 z-10 hidden h-screen w-64 flex-col bg-[#0a1628] px-6 py-20 shadow-lg"
+      class="fixed top-0 right-0 z-10 hidden h-screen w-64 flex-col bg-[#0a1628] px-6 py-20 shadow-lg md:hidden"
     >
       <ul class="flex flex-col list-none gap-6 text-sm uppercase tracking-widest text-white/80">
         <li><a href="#inicio" class="cursor-pointer transition hover:text-white">Início</a></li>
@@ -184,7 +209,7 @@
           <img
             src="./images/perfil.png"
             alt="Valney Maia Neto"
-            class="h-52 w-52 rounded-full object-cover lg:h-80 lg:w-80"
+            class="hover-tilt h-52 w-52 rounded-full object-cover lg:h-80 lg:w-80"
           />
           <p class="text-center leading-8 text-white lg:text-left">
             Sou bacharel em Ciências da Computação pela Universidade Federal do Cariri (UFCA) e acredito que tecnologia faz mais sentido quando resolve problemas reais. Ao longo da graduação, atuei por 3 anos na Diretoria de TI da UFCA, gerenciando redes, implantando sistemas e orientando estagiários, enquanto desenvolvia projetos que iam do front-end ao hardware embarcado.
@@ -252,7 +277,7 @@
         <div class="mt-10 grid gap-8 lg:mt-16 lg:grid-cols-3">
           <article class="rounded-2xl bg-[#1a2a3a] p-6">
             <div
-              class="h-44 w-full rounded-xl bg-cover bg-center"
+              class="hover-tilt h-44 w-full rounded-xl bg-cover bg-center"
               style="background-image: url('./images/projeto1.png')"
             ></div>
             <h3 class="mt-5 text-2xl font-semibold">Ecommerce Maia imports</h3>
@@ -263,12 +288,14 @@
               <a
                 href="https://github.com/valneymaia/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-github rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800"
                 >GitHub</a
               >
               <a
                 href="https://maia-imports.vercel.app/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-lg border border-white/40 px-4 py-2 text-sm font-medium text-white transition hover:border-white"
                 >Ver Projeto</a
               >
@@ -277,7 +304,7 @@
 
           <article class="rounded-2xl bg-[#1a2a3a] p-6">
             <div
-              class="h-44 w-full rounded-xl bg-cover bg-center"
+              class="hover-tilt h-44 w-full rounded-xl bg-cover bg-center"
               style="background-image: url('./images/place.png')"
             ></div>
             <h3 class="mt-5 text-2xl font-semibold">Place.io</h3>
@@ -287,12 +314,14 @@
               <a
                 href="https://github.com/valneymaia/Place.io"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-github rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800"
                 >GitHub</a
               >
               <a
                 href="https://www.youtube.com/shorts/hOszJRLpDiI"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-lg border border-white/40 px-4 py-2 text-sm font-medium text-white transition hover:border-white"
                 >Ver Projeto</a
               >
@@ -301,7 +330,7 @@
 
           <article class="rounded-2xl bg-[#1a2a3a] p-6">
             <div
-              class="h-44 w-full rounded-xl bg-cover bg-center"
+              class="hover-tilt h-44 w-full rounded-xl bg-cover bg-center"
               style="background-image: url('./images/projeto03.png')"
             ></div>
             <h3 class="mt-5 text-2xl font-semibold">Calculadora Mobile</h3>
@@ -312,12 +341,14 @@
               <a
                 href="https://github.com/valneymaia/Calculadora-Mobile"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-github rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800"
                 >GitHub</a
               >
               <a
                 href="https://youtube.com/shorts/LUJUANLHs3U?si=TuJiWUv5VE6V6rb_"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-lg border border-white/40 px-4 py-2 text-sm font-medium text-white transition hover:border-white"
                 >Ver Projeto</a
               >
@@ -338,7 +369,7 @@
         <div class="mt-10 space-y-12 lg:mt-24 lg:space-y-14">
           <article class="flex flex-col items-center gap-6 lg:flex-row">
             <div
-              class="h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
+              class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/dti.jpeg')"
             ></div>
             <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
@@ -353,7 +384,7 @@
 
           <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
             <div
-              class="h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
+              class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/extensao.jpeg')"
             ></div>
             <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
@@ -368,7 +399,7 @@
 
           <article class="flex flex-col items-center gap-6 lg:flex-row">
             <div
-              class="h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
+              class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/ufca.png')"
             ></div>
             <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
@@ -383,7 +414,7 @@
 
           <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
             <div
-              class="h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
+              class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/HACK.jpeg')"
             ></div>
             <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
@@ -412,7 +443,7 @@
 
         <div class="mt-10 text-center leading-8 lg:mt-12">
           <p>
-            <strong>E-mail:</strong> valney.maia@aluno.ufca.edu.br<br />
+            <strong>E-mail:</strong> valney.maia.dev@gmail.com<br />
             <strong>Telefone:</strong> (87) 99913-8307<br />
             <strong>Cidade:</strong> Juazeiro do Norte - CE<br />
             <strong>Idiomas:</strong> Português (nativo) e Inglês
@@ -421,7 +452,7 @@
         </div>
 
         <form
-          action="https://formsubmit.co/ajax/valney.maia@aluno.ufca.edu.br"
+          action="https://formsubmit.co/ajax/valney.maia.dev@gmail.com"
           method="POST"
           class="mx-auto mt-10 flex max-w-[800px] flex-col lg:mt-16"
           id="contactForm"
@@ -461,6 +492,8 @@
           >
             Enviar
           </button>
+
+          <p id="contact-feedback" class="mt-4 hidden text-center text-sm"></p>
         </form>
       </div>
     </section>
@@ -470,15 +503,9 @@
     >
       <div class="flex items-center gap-6">
         <a
-          href="mailto:valney.maia@aluno.ufca.edu.br"
-          class="text-white/75 transition hover:text-white"
-          aria-label="E-mail de Valney Maia Neto"
-        >
-          <i class="fa-solid fa-envelope fa-xl"></i>
-        </a>
-        <a
           href="https://www.linkedin.com/in/valney-maia-98b5a5150/"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="LinkedIn de Valney Maia Neto"
           class="text-white/75 transition hover:text-white"
         >
@@ -487,6 +514,7 @@
         <a
           href="https://github.com/valneymaia"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="GitHub de Valney Maia Neto"
           class="text-white/75 transition hover:text-white"
         >
@@ -495,6 +523,7 @@
         <a
           href="https://www.instagram.com/valneymaia"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram de Valney Maia Neto"
           class="text-white/75 transition hover:text-white"
         >

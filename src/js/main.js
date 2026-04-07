@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
   // Atualizar ícone do tema ao carregar
   updateThemeIcon();
+  initHoverTilt();
   
   // Listener para mudanças de tema
   document.addEventListener('themeChanged', () => {
@@ -38,6 +39,33 @@ function updateThemeIcon() {
       toggleBtn.title = 'Modo claro (Clique aqui)';
     }
   }
+}
+
+function initHoverTilt() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouch = window.matchMedia('(hover: none)').matches;
+  if (prefersReduced || isTouch) return;
+
+  const tiltItems = document.querySelectorAll('.hover-tilt');
+
+  tiltItems.forEach((item) => {
+    item.addEventListener('mousemove', (event) => {
+      const rect = item.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width;
+      const py = (event.clientY - rect.top) / rect.height;
+
+      const rotateY = (px - 0.5) * 10;
+      const rotateX = (0.5 - py) * 10;
+
+      item.classList.add('is-active');
+      item.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale(1.02)`;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.classList.remove('is-active');
+      item.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+  });
 }
 
 // Smooth scroll para links internos
