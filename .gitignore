@@ -1,2 +1,39 @@
+# Dependencies
 node_modules/
+package-lock.json
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
 .DS_Store
+Thumbs.db
+*.log
+
+# Build & Distribution
+dist/
+build/
+*.zip
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.parcel-cache
+
+# Testing
+coverage/
+.nyc_output
+
+# Editor temporary files
+*~
+*.tmp
+.#*
