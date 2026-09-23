@@ -324,7 +324,7 @@
             />
             <span class="mt-4 mb-4 text-lg font-medium">Infraestrutura e Automação</span>
             <p class="text-white/75">
-              Linux, Docker, Git, GitHub, Vercel, VPS, redes, HPE IMC, NetBox, bots em Python, Telegram, manipulação de links e integração com APIs.
+              Linux, Docker, Git, GitHub, Vercel, VPS, redes de computadores, HPE IMC, NetBox, Grafana, PostgreSQL, bots em Python, Telegram, integração com APIs e automação de processos.
             </p>
           </article>
 
@@ -340,7 +340,7 @@
             />
             <span class="mt-4 mb-4 text-lg font-medium">IoT e Embarcados</span>
             <p class="text-white/75">
-              ESP32, Arduino, Raspberry Pi Pico, MicroPython, C, sensores, GPIO, ADC, matriz de LEDs e teclado matricial.
+              ESP32, ESP32-S3, Arduino, Raspberry Pi, Raspberry Pi Pico, ESP-IDF, FreeRTOS, MicroPython, C, MQTT, Mosquitto, Node-RED, sensores, GPIO, ADC, interrupções, comunicação serial, matriz de LEDs e teclado matricial.
             </p>
           </article>
         </div>
@@ -356,6 +356,43 @@
         </h2>
 
         <div class="mt-10 grid gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+          <article id="flowcount" class="rounded-2xl bg-[#1a2a3a] p-6">
+            <img
+              src="./images/flowcount-demonstracao-contagem.gif"
+              alt="Protótipo do FlowCount em uma esteira, com sensor fotoelétrico amarelo, gabinete de controle e display de contagem"
+              loading="lazy"
+              decoding="async"
+              class="hover-tilt h-44 w-full rounded-xl bg-[#101b2c] object-contain"
+            />
+            <h3 class="mt-5 text-2xl font-semibold">FlowCount</h3>
+            <p class="mt-3 leading-7 text-white/75">
+              Solução IoT desenvolvida em equipe durante o PNAAT para automatizar a contagem de produtos em esteiras e bancadas. Integra sensor fotoelétrico, ESP32-S3 e comunicação MQTT com Raspberry Pi, permitindo acompanhar a produção em dashboards no Grafana.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-lg border border-white/40 px-3 py-1 text-xs text-white/70">ESP32-S3</span>
+              <span class="rounded-lg border border-white/40 px-3 py-1 text-xs text-white/70">Raspberry Pi</span>
+              <span class="rounded-lg border border-white/40 px-3 py-1 text-xs text-white/70">MQTT</span>
+              <span class="rounded-lg border border-white/40 px-3 py-1 text-xs text-white/70">Grafana</span>
+              <span class="rounded-lg border border-white/40 px-3 py-1 text-xs text-white/70">IoT</span>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a
+                href="https://github.com/valneymaia/FlowCount"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-github rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800"
+                >GitHub</a
+              >
+              <a
+                href="https://youtu.be/uTHtgHY5JzY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-lg border border-white/40 px-4 py-2 text-sm font-medium text-white transition hover:border-white"
+                >Ver projeto</a
+              >
+            </div>
+          </article>
+
           <article class="rounded-2xl bg-[#1a2a3a] p-6">
             <div
               class="hover-tilt h-44 w-full rounded-xl bg-cover bg-center"
@@ -591,7 +628,7 @@
             <span class="mt-2 block text-sm uppercase tracking-wider text-white/60">suporte e infraestrutura</span>
           </article>
           <article class="rounded-2xl bg-[#1a2a3a] p-5 text-center">
-            <strong class="block text-3xl font-semibold">330h+</strong>
+            <strong class="block text-3xl font-semibold">586h+</strong>
             <span class="mt-2 block text-sm uppercase tracking-wider text-white/60">certificações técnicas</span>
           </article>
         </div>
@@ -607,7 +644,7 @@
                 Suporte Técnico | Lanlink
               </h3>
               <span class="mt-2 block text-sm font-medium uppercase tracking-wider text-white/60">
-                Fórum do Crato · Junho de 2026 - Atual
+                TJCE — Fórum de Juazeiro do Norte · Junho de 2026 - Atual
               </span>
               <p class="mt-4 leading-7 text-white/75">
                 Atuo em ambiente institucional garantindo a continuidade da operação de TIC, com suporte presencial e remoto, diagnóstico de incidentes, configuração de estações, apoio a redes, controle de ativos, backups e documentação. Trago essa vivência operacional para construir software mais útil, estável e alinhado a necessidades reais de usuários e equipes.
@@ -623,11 +660,52 @@
           </article>
 
           <article class="flex flex-col items-center gap-6 lg:flex-row">
+            <img
+              src="./images/pnaat-equipe.jpg"
+              alt="Cinco integrantes do PNAAT reunidos em uma sala durante a formação"
+              loading="lazy"
+              decoding="async"
+              class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-[#101b2c] object-contain shadow"
+            />
+            <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
+              <h3 class="text-3xl font-medium lg:text-4xl">
+                PNAAT | Formação prática em IoT e Edge AI
+              </h3>
+              <a
+                href="https://drive.google.com/drive/folders/1JQyTrCAfwsPMssvQza5Q3jZGHdgJlXeP?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-2 block text-sm font-medium uppercase tracking-wider text-white/60 transition hover:text-white"
+              >
+                2026 | 234 horas de formação
+              </a>
+              <p class="mt-4 leading-7 text-white/75">
+                Concluí a Trilha de Fundamentos e o Intensivo Maker do PNAAT, com formação em sistemas embarcados, IoT e inteligência artificial na borda. Trabalhei com sensores, ESP32, Raspberry Pi e visão computacional com YOLO, Edge Impulse e TensorFlow Lite. Participei do desenvolvimento em equipe do FlowCount, de provas de conceito e apresentações técnicas. Fui aprovado para a etapa de Residência Tecnológica e participei do Job Fair do programa.
+              </p>
+              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">IoT</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Edge AI</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">ESP32</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Raspberry Pi</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">YOLO</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Edge Impulse</span>
+                <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">TensorFlow Lite</span>
+              </div>
+              <a
+                href="#flowcount"
+                class="mt-5 inline-block text-sm font-medium uppercase tracking-wider text-white/60 underline decoration-white/40 underline-offset-4 transition hover:text-white hover:decoration-white"
+              >
+                Conhecer o FlowCount
+              </a>
+            </div>
+          </article>
+
+          <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
             <div
               class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/dti.jpeg')"
             ></div>
-            <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
+            <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
               <h3 class="text-3xl font-medium lg:text-4xl">
                 Bolsista PAP | DTI UFCA
               </h3>
@@ -645,7 +723,7 @@
               <p class="mt-3 leading-7 text-white/75">
                 Também desenvolvi dashboards no Looker Studio para inventário de TI, apoiei documentação técnica e trabalhei com ativos e monitoramento de rede usando HPE IMC, NetBox, VLANs, VPNs, switches Aruba, access points Ruckus e Veyon.
               </p>
-              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-end">
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">300+ máquinas</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">10 laboratórios</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">FOG Project</span>
@@ -658,12 +736,12 @@
             </div>
           </article>
 
-          <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
+          <article class="flex flex-col items-center gap-6 lg:flex-row">
             <div
               class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/extensao.jpeg')"
             ></div>
-            <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
+            <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
               <h3 class="text-3xl font-medium lg:text-4xl">
                 Projeto de Extensão | Pensamento Computacional
               </h3>
@@ -678,7 +756,7 @@
               <p class="mt-4 leading-7 text-white/75">
                 Ministrei aulas de lógica de programação e Arduino para estudantes da rede pública, aproximando conceitos de software, eletrônica e resolução de problemas. A experiência fortaleceu minha comunicação técnica, didática e capacidade de transformar temas complexos em atividades práticas.
               </p>
-              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-end">
+              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Lógica</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Arduino</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Educação Maker</span>
@@ -687,12 +765,12 @@
             </div>
           </article>
 
-          <article class="flex flex-col items-center gap-6 lg:flex-row">
+          <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
             <div
               class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/ufca.png')"
             ></div>
-            <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
+            <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
               <h3 class="text-3xl font-medium lg:text-4xl">Formação Acadêmica</h3>
               <span class="mt-2 block text-sm font-medium uppercase tracking-wider text-white/60">
                 Bacharelado em Ciência da Computação · UFCA · Concluído em 2026
@@ -700,7 +778,7 @@
               <p class="mt-4 leading-7 text-white/75">
                 A graduação consolidou minha base em programação, algoritmos, estruturas de dados, análise de complexidade, engenharia de software, bancos de dados, redes, sistemas operacionais e arquitetura de soluções. Ao longo do curso, conectei teoria e prática em projetos web, mobile, APIs, automações, dados, machine learning, IoT e sistemas embarcados.
               </p>
-              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+              <div class="mt-5 flex flex-wrap justify-center gap-2 lg:justify-end">
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Algoritmos</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Big O</span>
                 <span class="rounded-lg border border-white/40 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/70">Programação</span>
@@ -712,22 +790,46 @@
             </div>
           </article>
 
-          <article class="flex flex-col items-center gap-6 lg:flex-row-reverse">
+          <article class="flex flex-col items-center gap-6 lg:flex-row">
             <div
               class="hover-tilt h-[300px] w-[300px] rounded-2xl bg-cover bg-center shadow"
               style="background-image: url('./images/HACK.jpeg')"
             ></div>
-            <div class="max-w-[600px] text-center lg:mr-12 lg:text-right">
+            <div class="max-w-[600px] text-center lg:ml-12 lg:text-left">
               <h3 class="text-3xl font-medium lg:text-4xl">
                 Certificados Relevantes
               </h3>
-              <p class="mt-3 leading-7 text-white/75">
-                Cloud Services e Serviços Cognitivos com Swift — Eldorado / HackTruck (100h)<br />
-                Swift: Fundamentos, Algoritmos e POO — Eldorado / HackTruck (50h)<br />
-                Sistemas Embarcados — Embarca Tech (160h)<br />
-                Conceitos Básicos de Redes — Cisco (22h)<br />
-                Sensoriamento Inteligente para Indústria — Virtus (20h)
-              </p>
+              <div class="mt-4 space-y-4 text-left leading-7 text-white/75 lg:text-left">
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1eOOeN4iLMVRJEdKaQbjahL1tY2sluliH/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-medium text-white/75 underline decoration-white/40 underline-offset-4 transition hover:text-white hover:decoration-white"
+                  >
+                    PNAAT — Trilha de Fundamentos em Sistemas Embarcados e Inteligência Artificial na Borda
+                  </a>
+                  <span class="block text-sm text-white/60">EAD · 74h · Conclusão: abril de 2026</span>
+                </div>
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1WXryQ5AKNlbntdaKMluml1Nl-WN1nJWf/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-medium text-white/75 underline decoration-white/40 underline-offset-4 transition hover:text-white hover:decoration-white"
+                  >
+                    PNAAT — Intensivo Maker em Sistemas Embarcados e Inteligência Artificial na Borda
+                  </a>
+                  <span class="block text-sm text-white/60">Capacitação presencial, incluindo atividades complementares assíncronas · 160h · agosto a setembro de 2026</span>
+                </div>
+                <p>
+                  Cloud Services e Serviços Cognitivos com Swift — Eldorado / HackTruck (100h)<br />
+                  Swift: Fundamentos, Algoritmos e POO — Eldorado / HackTruck (50h)<br />
+                  Sistemas Embarcados — Embarca Tech (160h)<br />
+                  Conceitos Básicos de Redes — Cisco (22h)<br />
+                  Sensoriamento Inteligente para Indústria — Virtus (20h)
+                </p>
+              </div>
             </div>
           </article>
         </div>
